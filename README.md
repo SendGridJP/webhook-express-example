@@ -10,6 +10,7 @@ Event WebhookおよびParse Webhookに対応しています。
 # 起動方法
 ```
 $ git clone https://github.com/SendGridJP/webhook-express-example
+$ cd webhook-express-example
 $ npm install
 $ npm start
 ```
