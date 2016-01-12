@@ -5,15 +5,14 @@ var upload = multer();
 var app = express();
 app.use(bodyParser.json());
 
-var root = '/webhook-express-example';
 var port = parseInt(process.env.PORT) || parseInt(process.env.VCAP_APP_PORT) || 3000;
 
-app.get(root + '/', function(req, res) {
+app.get('/', function(req, res) {
   res.send('Hello World!');
 });
 
 // Event Webhookの受信
-app.post(root + '/EventReceiver', function(req, res) {
+app.post('/EventReceiver', function(req, res) {
   req.body.forEach(function(elm, idx, arr) {
     console.log(elm);
   });
@@ -21,7 +20,7 @@ app.post(root + '/EventReceiver', function(req, res) {
 });
 
 // Parse Webhookの受信
-app.post(root + '/ParseReceiver', upload.any(), function(req, res) {
+app.post('/ParseReceiver', upload.any(), function(req, res) {
   // テキストフィールド
   console.log(req.body);
   // 添付ファイル

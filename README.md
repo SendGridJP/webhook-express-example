@@ -19,7 +19,7 @@ $ npm start
 ## Event Webhook
 - Webポータルで[SETTINGS > Mail Settings > Event Notification](https://app.sendgrid.com/settings/mail_settings)を開きます。
 - HTTP POST URLを設定します。  
-http://%ホスト名%/webhook-express-example/EventReceiver
+http://%Webアプリケーションのホスト名%/EventReceiver
 - SELECT ACTIONSで受信したいイベントのチェックをONにします。
 - 「Test Your Integration」ボタンを選択してイベントがWebアプリケーションにPOSTされることを確認します。
 - SendGrid経由で[送信](https://sendgrid.com/docs/API_Reference/Web_API/mail.html)したメールの各イベントがアプリケーションにPOSTされることを確認します。
@@ -28,7 +28,7 @@ http://%ホスト名%/webhook-express-example/EventReceiver
 - Webポータルで[SETTINGS > Inbound Parse](https://app.sendgrid.com/settings/parse)を開きます。
 - 「Add Host & URL」ボタンを選択して各設定を行います。[参考](https://sendgrid.kke.co.jp/blog/?p=827)
   - HOSTNAME：メールの宛先ドメイン。
-  - URL：POSTを受信するWebアプリケーションのURL。
+  - URL：http://%Webアプリケーションのホスト名%/ParseReceiver
   - SPAM CHECK：OFF
   - SEND RAW：OFF
 - 「Save」ボタンを選択して保存します。
