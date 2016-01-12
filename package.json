@@ -1,0 +1,31 @@
+{
+  "name": "webhook-express-example",
+  "version": "1.0.0",
+  "description": "SendGrid webhook example for express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SendGridJP/webhook-express-example.git"
+  },
+  "keywords": [
+    "SendGrid",
+    "Parse",
+    "Event",
+    "Webhook",
+    "Express"
+  ],
+  "author": "awwa500@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SendGridJP/webhook-express-example/issues"
+  },
+  "homepage": "https://github.com/SendGridJP/webhook-express-example#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "multer": "^1.1.0"
+  }
+}
