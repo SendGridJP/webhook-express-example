@@ -6,6 +6,7 @@ var app = express();
 app.use(bodyParser.json());
 
 var root = '/webhook-express-example';
+var port = parseInt(process.env.PORT) || parseInt(process.env.VCAP_APP_PORT) || 3000;
 
 app.get(root + '/', function(req, res) {
   res.send('Hello World!');
@@ -30,6 +31,6 @@ app.post(root + '/ParseReceiver', upload.any(), function(req, res) {
   res.send('Success');
 });
 
-app.listen(3000, function() {
-  console.log('Example app listening on port 3000!');
+app.listen(port, function() {
+  console.log('Example app listening on port ' + port + '!');
 });
