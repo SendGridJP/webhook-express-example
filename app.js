@@ -14,9 +14,9 @@ app.get(root + '/', function(req, res) {
 
 // Event Webhookの受信
 app.post(root + '/EventReceiver', function(req, res) {
-  for (var event of req.body) {
-    console.log(event);
-  }
+  req.body.forEach(function(elm, idx, arr) {
+    console.log(elm);
+  });
   res.send('Success');
 });
 
@@ -25,9 +25,9 @@ app.post(root + '/ParseReceiver', upload.any(), function(req, res) {
   // テキストフィールド
   console.log(req.body);
   // 添付ファイル
-  for (var file of req.files) {
-    console.log(file);
-  }
+  req.files.forEach(function(elm, idx, arr) {
+    console.log(elm);
+  });
   res.send('Success');
 });
 
