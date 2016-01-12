@@ -17,19 +17,19 @@ $ npm start
 
 # SendGridの設定
 ## Event Webhook
-- Webポータルで[SETTINGS > Mail Settings > Event Notification](https://app.sendgrid.com/settings/mail_settings)を開きます。
-- HTTP POST URLを設定します。  
+1. Webポータルで[SETTINGS > Mail Settings > Event Notification](https://app.sendgrid.com/settings/mail_settings)を開きます。
+1. HTTP POST URLを設定します。  
 http://%Webアプリケーションのホスト名%/EventReceiver
-- SELECT ACTIONSで受信したいイベントのチェックをONにします。
-- 「Test Your Integration」ボタンを選択してイベントがWebアプリケーションにPOSTされることを確認します。
-- SendGrid経由で[送信](https://sendgrid.com/docs/API_Reference/Web_API/mail.html)したメールの各イベントがアプリケーションにPOSTされることを確認します。
+1. SELECT ACTIONSで受信したいイベントのチェックをONにします。
+1. 「Test Your Integration」ボタンを選択してイベントがWebアプリケーションにPOSTされることを確認します。
+1. SendGrid経由で[送信](https://sendgrid.com/docs/API_Reference/Web_API/mail.html)したメールの各イベントがアプリケーションにPOSTされることを確認します。
 
 ## Parse Webhook
-- Webポータルで[SETTINGS > Inbound Parse](https://app.sendgrid.com/settings/parse)を開きます。
-- 「Add Host & URL」ボタンを選択して各設定を行います。[参考](https://sendgrid.kke.co.jp/blog/?p=827)
-  - HOSTNAME：メールの宛先ドメイン。
-  - URL：http://%Webアプリケーションのホスト名%/ParseReceiver
-  - SPAM CHECK：OFF
-  - SEND RAW：OFF
-- 「Save」ボタンを選択して保存します。
-- HOSTNAMEに設定したドメインの任意のメールアドレス宛にメールを送信して、受信したメールの内容がWebアプリケーションにPOSTされることを確認します。
+1. Webポータルで[SETTINGS > Inbound Parse](https://app.sendgrid.com/settings/parse)を開きます。
+1. 「Add Host & URL」ボタンを選択して各設定を行います。[参考](https://sendgrid.kke.co.jp/blog/?p=827)
+  1. HOSTNAME：メールの宛先ドメイン。
+  1. URL：http://%Webアプリケーションのホスト名%/ParseReceiver
+  1. SPAM CHECK：OFF
+  1. SEND RAW：OFF
+1. 「Save」ボタンを選択して保存します。
+1. HOSTNAMEに設定したドメインの任意のメールアドレス宛にメールを送信して、受信したメールの内容がWebアプリケーションにPOSTされることを確認します。
